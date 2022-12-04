@@ -4,8 +4,7 @@ This is a HackerNews clone built with GraphQL(gglgen), Go and MySQL.
 
 ### Frontend
 
-- [Live Demo]()
-- [Frontend Repo]()
+- [Frontend Repo](https://github.com/thegeorgenikhil/hackernews-react-graphql)
 
 It is based on the [How to GraphQL Tutorial](https://www.howtographql.com/graphql-go/0-introduction/).
 
@@ -37,7 +36,7 @@ go run server.go
 
 5. Open [http://localhost:8080](http://localhost:8080) to view the GraphQL Playground it in the browser.
 
-6. Use [http://localhost:8000/query](http://localhost:8000/query) to query the GraphQL API.
+6. Use [http://localhost:8080/graphql](http://localhost:8080/graphql) to query the GraphQL API.
 
 ## GraphQL Queries and Mutations
 

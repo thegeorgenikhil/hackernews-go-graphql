@@ -22,12 +22,14 @@ func (r *mutationResolver) CreateLink(ctx context.Context, input model.NewLink) 
 	if user == nil {
 		return &model.Link{}, fmt.Errorf("access denied")
 	}
-	var link links.Link
-	link.Title = input.Title
 	//check if links.Title is empty or link.Address is empty
-	if link.Title == "" || input.Address == "" {
+	if input.Title == "" || input.Address == "" {
 		return &model.Link{}, fmt.Errorf("Title or Address cannot be empty")
 	}
+
+	var link links.Link
+	link.Title = input.Title
+	
 	// checking whether the link has https:// in it
 	if !strings.HasPrefix(input.Address, "https://") {
 		link.Address = "https://" + input.Address
